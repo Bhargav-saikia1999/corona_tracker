@@ -31,7 +31,7 @@ btn.addEventListener("click", (e) => {
       var count = 0;
 
       for (var st of stateArray) {
-        if (st.state === formattedInput) {
+        if (st.state === userInput) {
           card1.textContent = st.confirmed;
           card2.textContent = st.deaths;
           card3.textContent = st.active;
@@ -43,20 +43,22 @@ btn.addEventListener("click", (e) => {
         count++;
       }
 
-      console.log(count);
-      console.log(stateArray.length);
-      console.log(stateArray);
       if (count >= stateArray.length) {
-        error.innerHTML = `<h4>SORRY DATA NOT AVAILABLE FOR ${formattedInput.toUpperCase()}!</h4>`;
+        error.innerHTML = `<h4>SORRY DATA NOT AVAILABLE FOR ${userInput}!</h4>
+        <ul style="text-align: left; list-style:none;"><li>1) Eg. for one-worded states type- Assam</li>
+        <li>2) Eg. for two-worded states type- Tamil Nadu</li>
+        <li>3) Try another spelling.</li>
+        </ul>
+        `;
         error.style.padding = "0.8rem";
-        const para = document.createElement("p");
-        para.innerHTML = "Tip: try another spelling !";
-        error.appendChild(para);
+        // const para = document.createElement("p");
+        // para.innerHTML = "Tip: try another spelling !";
+        // error.appendChild(para);
 
         setTimeout(() => {
           error.innerHTML = ``;
           error.style.padding = "0rem";
-        }, 3500);
+        }, 10000);
       }
     });
 

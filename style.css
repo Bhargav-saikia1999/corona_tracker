@@ -7,12 +7,24 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #f7c575;
+  background-image: url("img/image.jpg");
   background-size: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(46, 45, 21, 0.308);
+  /* background-image: linear-gradient(to left bottom, #4e4848, #00444400); */
+  z-index: -1;
 }
 
 main {
   min-height: calc(100vh - 30px);
+  overflow: hidden;
 }
 
 h1 {
@@ -20,8 +32,10 @@ h1 {
   text-align: center;
   padding-top: 5.5rem;
   padding-bottom: 2.5rem;
-  color: #0d79f7;
+  /* color: #0d79f7; */
+  color: #fafaf2;
   align-items: center;
+  text-shadow: 1.5px 1.5px 1px rgb(41, 39, 31);
 }
 form {
   display: flex;
@@ -33,6 +47,10 @@ input {
   padding: 5px 20px;
   margin-right: 0.3rem;
 }
+.butam {
+  color: rgb(253, 253, 251);
+}
+
 .container {
   display: flex;
   justify-content: space-evenly;
@@ -78,12 +96,16 @@ footer {
   height: 30px;
   padding: 3px;
   text-align: center;
-  background-color: #d89e40;
+  background-color: #b67204;
   color: #f4f4f4;
   font-size: 0.9rem;
 }
 
 @media screen and (max-width: 550px) {
+  main {
+    min-height: calc(100vh - 30px);
+  }
+
   .container {
     display: flex;
     flex-direction: column;
@@ -97,13 +119,12 @@ footer {
     padding: 10px;
     margin-bottom: 6px;
     box-shadow: none;
-
     width: 267.5px;
   }
 
   h1 {
     min-height: 10vh;
-    padding-top: 3.5rem;
+    padding-top: 1.5rem;
     padding-left: 1rem;
     text-align: center;
   }
@@ -118,8 +139,9 @@ footer {
     z-index: 5;
   }
 
-  button {
+  .butam {
     margin-top: 1rem;
+    color: white;
   }
 
   footer {
