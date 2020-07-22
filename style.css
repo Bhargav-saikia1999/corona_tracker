@@ -23,6 +23,7 @@ body {
 }
 
 main {
+  position: relative;
   min-height: calc(100vh - 30px);
   overflow: hidden;
 }
@@ -142,6 +143,10 @@ footer {
   .butam {
     margin-top: 1rem;
     color: white;
+  }
+
+  .custom-class {
+    width: 73%;
   }
 
   footer {
