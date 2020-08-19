@@ -56,11 +56,13 @@ btn.addEventListener("click", (e) => {
         </ul>
         `;
           error.style.padding = "0.8rem";
+          error.classList.add("animate");
           // const para = document.createElement("p");
           // para.innerHTML = "Tip: try another spelling !";
           // error.appendChild(para);
 
           setTimeout(() => {
+            error.classList.remove("animate");
             error.innerHTML = ``;
             error.style.padding = "0rem";
           }, 5000);
