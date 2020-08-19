@@ -47,6 +47,9 @@ form {
 input {
   padding: 5px 20px;
   margin-right: 0.3rem;
+  border: 2px solid #ffe23f;
+  border-radius: 5px;
+  outline: none;
 }
 .butam {
   color: rgb(253, 253, 251);
